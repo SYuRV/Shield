@@ -152,3 +152,12 @@ SHIELD v4.99 — это дельта-нейтральная архитектур
 
 - **Язык реализации:** **Go (Golang)** — горутины, каналы, суб-миллисекундные паузы GC.
 - **Протокол интеграции:** Protocol-buffers / JSON через WebSockets с использованием **Bybit API v5** [Bybit, 2026].
+
+
+---
+
+<div align="center">
+
+[<kbd> **🇬🇧 English** </kbd>](#english) <span>  </span> [<kbd> **🇷🇺 Русский** </kbd>](#russian)
+
+</div>
