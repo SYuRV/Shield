@@ -16,7 +16,7 @@
 
 
 <p align="center">
-  <img src="scheme.png" alt="SHIELD v4.99 Architecture Block Diagram" width="850">
+  <img src="scheme.svg" alt="SHIELD v4.99 Architecture Block Diagram" width="850">
 </p>
 
 
@@ -94,7 +94,7 @@ The infrastructure layer is developed on Golang to eliminate the four classical 
 
 
 <p align="center">
-  <img src="scheme.png" alt="Блок-схема архитектуры SHIELD v4.99" width="850">
+  <img src="scheme.svg" alt="Блок-схема архитектуры SHIELD v4.99" width="850">
 </p>
 
 
