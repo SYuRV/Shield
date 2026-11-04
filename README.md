@@ -15,16 +15,14 @@
   <img src="scheme.svg" alt="Блок-схема архитектуры SHIELD v4.99" width="850">
 </p>
 
-**Project Status:** `Active R&D / Continuous Modernization Phase`. The framework architecture is actively evolving toward institutional infrastructure standards and is currently open for strategic engineering collaboration, liquidity provisioning partnerships, and prime-brokerage infrastructure integration.
+**Project Status:** `Active R&D / Continuous Modernization Phase`.
 
-Current Development Status & Institutional Adaptation
-
-The **SHIELD v4.99** execution matrix has been fundamentally re-engineered, migrating from legacy retail-grade wrappers to an enterprise-grade algorithmic trading specification. The compiled Go runtime integrates bare-metal latency mitigation protocols and microsecond execution boundary optimizations natively tailored for the **Bybit V5 API** core:
-
+**Infrastructure Evolution:**
+Rooted in a practical manual trading system, the framework architecture is actively evolving toward institutional infrastructure standards and is currently open for strategic engineering collaboration, liquidity provisioning partnerships, and prime-brokerage infrastructure integration.
+As part of this industry adaptation, the execution matrix of the SHIELD v4.99 suite is undergoing a fundamental overhaul, transitioning from retail-grade setups to industrial specifications for institutional algorithmic trading. To achieve this, low-level bare-metal latency mitigation techniques and execution limit optimizations, engineered specifically for the Bybit V5 API core, are being integrated directly into the Go runtime:
 - **Amend-Driven Memory Execution:** High-frequency spread capture via the `Mid-Price Chaser` engine is executed strictly through atomic `v5/order/amend` instructions. By modifying parameters directly inside the exchange matching engine's memory matrix, the system maintains strict queue priority (**Time Priority**). This bypasses the structural network latency and Order ID desynchronization failures inherent to legacy `Cancel + Place` sequences during severe high-volatility bottlenecks.
 - **Transactional Bulk Pipelines:** To guarantee systematic rate-limit immunity during option expiration spikes or aggressive delta-hedging cycles (f ≥ 45/sec), the state machine switches into a batch processing topology. Single limit operations are consolidated into atomic multi-order payloads via `v5/order/create-batch`, insulating the system's execution edge from clearinghouse rate-limit drops.
 - **Abstracted Transport Layer (FIX/FAST Readiness):** The framework features a deeply decoupled network I/O layer. While currently operating over high-throughput WebSocket and REST JSON streams, the execution pipelines are architecturally prepared for a seamless, drop-in transition to the ultra-low-latency binary **FIX/FAST** protocol as soon as institutional infrastructure partners provide direct FIX gateway access.
-
 
 This document provides a high-level architectural specification of the **SHIELD v4.99** autonomous derivative execution framework [Bybit, 2026]. The system is engineered to manage multi-asset delta-neutral structures on high-liquidity derivative desks (specifically targeting SOL and ETH networks) under unified risk accounts with Portfolio Margin configurations (PM stress-matrix matching) [Bybit, 2026].
 
@@ -97,13 +95,11 @@ The system embeds an enterprise-grade infrastructure layer to eliminate the four
   <img src="scheme.svg" alt="Блок-схема архитектуры SHIELD v4.99" width="850">
 </p>
 
-**Статус проекта:** `Активная фаза R&D / Непрерывная модернизация`. 
-Архитектура комплекса планомерно переводится на инфраструктурные стандарты институционального уровня. Проект открыт для стратегического технического сотрудничества, интеграции с ликвидти-провайдерами и подключения к прайм-брокерской инфраструктуре.
+**Статус проекта:** `Активная фаза R&D / Непрерывная модернизация`.
 
-Текущий статус разработки и индустриальная адаптация
-
-Матрица исполнения комплекса **SHIELD v4.99** была фундаментально переработана: осуществлен полный переход от классических ритейл-оберток к промышленным спецификациям институционального алготрейдинга. Скомпилированная исполняемая среда (Go рантайм) интегрирует низкоуровневые методы минимизации латентности (Bare-Metal Latency Mitigation) и оптимизации лимитов исполнения, спроектированные непосредственно под ядро **Bybit V5 API**:
-
+**Эволюция инфраструктуры:**
+Базируясь на практической ручной торговой системе, архитектура комплекса планомерно переводится на инфраструктурные стандарты институционального уровня. В настоящее время проект открыт для стратегического технического сотрудничества, интеграции с провайдерами ликвидности и подключения к прайм-брокерской инфраструктуре.
+В рамках этой индустриальной адаптации матрица исполнения комплекса SHIELD v4.99 фундаментально перерабатывается, осуществляя переход от ритейл-решений к промышленным спецификациям для институционального алготрейдинга. Для достижения этой цели низкоуровневые методы минимизации латентности (Bare-Metal Latency Mitigation) и оптимизации лимитов исполнения, спроектированные непосредственно под ядро Bybit V5 API, интегрируются напрямую в Go-рантайм:
 - **Атомарные модификации в памяти (Amend-Driven Execution):** Модуль высокочастотного преследования спреда `Mid-Price Chaser` осуществляет ведение ордеров строго через инструкции `v5/order/amend`. Параметры заявок изменяются непосредственно внутри оперативной памяти мэтчингового ядра биржи. Это позволяет полностью сохранять временной приоритет в очереди (**Time Priority**) и исключает риски рассинхронизации Order ID или потери сетевых пакетов, характерные для устаревших связок `Cancel + Place` в моменты экстремального всплеска волатильности.
 - **Пакетные транзакционные конвейеры (Bulk Pipelines):** Для обеспечения абсолютного протокольного иммунитета к биржевым лимитам во время экспирационных сессий или агрессивных циклов дельта-хеджирования (f ≥ 45/сек), стейт-машина автоматически перестраивает топологию обработки данных. Одиночные операции упаковываются в единые мульти-ордерные полезные нагрузки через метод `v5/order/create-batch`, что надежно защищает контур исполнения от сброса соединений со стороны клиринга (Rate-Limit Drops).
 - **Абстракция транспортного слоя (Готовность к FIX/FAST):** Сетевой I/O слой фреймворка полностью изолирован от бизнес-логики. Текущая WebSocket/REST JSON-архитектура концептуально подготовлена к бесшовному («drop-in») переходу на бинарный протокол **FIX/FAST**. Переключение на ультранизколатентный интерфейс произойдет автоматически, как только инфраструктурный партнер предоставит прямой институциональный FIX-доступ к шлюзам биржи.
