@@ -12,7 +12,7 @@
 ## SHIELD v4.99: Autonomous Derivative Risk-Management Framework
 
 <p align="center">
-      <a href="https://raw.githubusercontent.com/SYuRV/Shield/refs/heads/main/scheme.svg)" target="_blank"><img src="scheme.svg" alt="Блок-схема архитектуры SHIELD v4.99" width="850"></a>
+      <a href="https://raw.githubusercontent.com/SYuRV/Shield/refs/heads/main/scheme.svg" target="_blank"><img src="scheme.svg" alt="Блок-схема архитектуры SHIELD v4.99" width="850"></a>
 </p>
 
 **Project Status:** `Active R&D / Continuous Modernization Phase`.
@@ -92,7 +92,7 @@ The system embeds an enterprise-grade infrastructure layer to eliminate the four
 ## SHIELD v4.99: Автономный программный комплекс управления рисками деривативов
 
 <p align="center">
-      <a href="https://raw.githubusercontent.com/SYuRV/Shield/refs/heads/main/scheme.svg)" target="_blank"><img src="scheme.svg" alt="Блок-схема архитектуры SHIELD v4.99" width="850"></a>
+      <a href="https://raw.githubusercontent.com/SYuRV/Shield/refs/heads/main/scheme.svg" target="_blank"><img src="scheme.svg" alt="Блок-схема архитектуры SHIELD v4.99" width="850"></a>
 </p>
 
 **Статус проекта:** `Активная фаза R&D / Непрерывная модернизация`.
