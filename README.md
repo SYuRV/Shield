@@ -10,6 +10,8 @@
 # English
 
 ## SHIELD v4.99: Autonomous Derivative Risk-Management Framework
+> **Architectural Blueprint & R&D Notice:**  
+> This repository serves as a public architectural specification and system design showcase. To protect proprietary alpha and execution logic, the production source code and the next-generation lightweight mathematical models (v5.0+ R&D) are maintained in private repositories. Architecture walkthroughs and simulation benchmarks are available upon request during technical interviews.
 
 <p align="center">
       <a href="https://raw.githubusercontent.com/SYuRV/Shield/refs/heads/main/scheme.svg" target="_blank"><img src="scheme.svg" alt="Блок-схема архитектуры SHIELD v4.99" width="850"></a>
@@ -90,6 +92,8 @@ The system embeds an enterprise-grade infrastructure layer to eliminate the four
 # Русский
 
 ## SHIELD v4.99: Автономный программный комплекс управления рисками деривативов
+> **Примечание о статусе репозитория (Architectural Blueprint):**  
+> Данный репозиторий представляет собой публичную архитектурную спецификацию и описание системного дизайна. В целях защиты интеллектуальной собственности (alpha-логики) исходный код, а также актуальные облегченные математические модели (ветка R&D v5.0+) находятся в закрытом контуре. Детальный разбор архитектуры и результаты симуляций предоставляются по запросу на техническом интервью.
 
 <p align="center">
       <a href="https://raw.githubusercontent.com/SYuRV/Shield/refs/heads/main/scheme.svg" target="_blank"><img src="scheme.svg" alt="Блок-схема архитектуры SHIELD v4.99" width="850"></a>
